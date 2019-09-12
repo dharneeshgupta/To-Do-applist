@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/todoapp.css">
+    <!-- linking fontawesome librarary -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- outergrey div showing grey color background -->
+    <div id="outergrey">
+        <!-- the main frame will contain upper form with white background -->
+        <!-- the mainfram is flex div with direction column -->
+        <div id="main-frame">
+            <div id="heading">
+                <h1>TODO APP</h1>
+            </div>
+            
+            <form action="/addingtolist" method="post" id="upperform">
+                <div id="description">
+                    <span>DESCRIPTION</span>
+                    <input type="text" name="description" id="" placeholder="What do you need to do?">
+                </div>
+                    <!-- category-deadline is flex div -->
+                <div id="category-deadline">
+                    <div id="category">
+                        <span>CATEGORY</span>
+                        <select name="category" id="">
+                                <option value="Personal">Personal</option>
+                                <option value="Home">Home</option>
+                                <option value="Office">Office</option>
+                                
+                        </select>
+                    </div>
+                    <div id="deadline">
+                        <span>DEADLINE</span>
+                        <input type="date" name="deadline" required>
+                    </div>
+                </div>
+
+                <div id="upper-form-buttons">
+                    <button type="submit" id="add-task"><i class="far fa-plus-square"></i>&nbsp;&nbsp;ADD TASK</button>
+                </div>
+            </form>
+        </div>
+
+
+
+        <!--the below div will be runned in a loop -->
+        <form action="/removinglist" method="post" id="bottom-form">
+          <%for(let i=0;i<to_do_app.length;i++){%>
+                <div id="display-tasks">
+                    <label class="conChk">
+                        <input type="checkbox"  name="id" value="<%=to_do_app[i]._id%>">
+                        <span></span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=to_do_app[i].description%>
+                    </label>
+                    <span id="calendar">
+                        <i class="far fa-calendar-alt"></i>
+                        <%= to_do_app[i].deadline.toDateString() %>
+                    </span>
+                        
+                    <div class="work-type">
+                         <span><%=to_do_app[i].category%></span>
+                    </div>
+                        
+                </div>  
+                    <%}%>
+                    
+                <!-- yahan pe loop kahatam hoga     -->
+               
+                <button id="button-form-buttons" type="submit">
+                        <i class="fas fa-trash-alt"></i>  &nbsp;  DELETE TASK
+                </button>
+                    
+        </form>
+    </div>        
+    <script>
+    // custom script which will send a post request
+    </script>
+    <script src="/js/todoapp.js"></script>
+</body>
+</html>

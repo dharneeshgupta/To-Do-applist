@@ -1,0 +1,228 @@
+
+body{
+    margin: 0px;
+    background-color: black;
+}
+
+#outergrey,#main-frame
+{
+    margin: auto;
+    width: 85vw;
+    height: auto;
+    background-color:#808080;
+}
+
+
+#main-frame,#upper-form
+{
+    background-color: #FFFFFF;
+    width: 50vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+
+#heading
+{
+    width: 100%;
+    height: 20%;
+    border-bottom: 1px solid #E6E6E6;
+    text-align: center;
+    color: #746966;
+}
+
+
+#upperform
+{
+    width: 100%;
+    height: 80%;
+    background-color: orange;
+}
+
+#description
+{
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid #E6E6E6;
+    color: #746966;
+    font-weight: bold;
+    position: relative;   
+     
+}
+
+
+#description span{
+    position: absolute;
+    top:15%;
+    left: 5%;
+}
+
+#description input
+{
+    position: absolute;
+    top:41%;
+    left:5%;
+    height: 45%;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+
+#category-deadline
+{
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid #E6E6E6;
+    color: #746966;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+}
+
+#category,#deadline
+{
+    width: 50%;
+    height: 100%;
+    border-right: .5px solid #E6E6E6;
+    position: relative;
+}
+
+#category span,#deadline span{
+    position: absolute;
+    top:15%;
+    left:10%;
+}
+
+#category select,#deadline input
+{
+    position: absolute;
+    top:45%;
+    left:10%;
+    width: 45%;
+    height: 50%;
+    background-color: transparent;
+    border-color: transparent;
+    color:#758424;
+}
+
+#deadline
+{
+    border-left: .5px solid #E6E6E6;
+}
+
+
+#upper-form-buttons
+{
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #E6E6E6;
+    position: relative;
+}
+
+
+#upper-form-buttons button,#button-form-buttons{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    height: 40%;
+    width: 30%;
+    border-color: transparent;
+    background-color: #444444;
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+
+
+#bottom-form
+{
+    width: 50vw;
+    height: auto;
+    margin: auto;   
+}
+
+#display-tasks
+{
+    background-color: #FFFFFF;
+    width: 50vw; 
+    height: 11vh;
+    font-family: sans-serif;
+    border-bottom:2px solid #E6E6E6;
+    position: relative;
+    font-weight: bold;
+    color: #746966;
+    font-size: 1rem;
+}
+
+
+.conChk input
+{
+    position: absolute;
+    top:6%;
+    left:2%;
+}
+
+
+label .conChk input{
+    display: none;
+}
+
+label span{
+    width: 16px;
+    height:16px;
+    display: inline-block;
+    position: relative;
+    color:greenyellow;
+    background-color:darkblue;
+    border:2px solid black;
+    left:11px;
+    top:4px;
+}
+
+[type="checkbox"]:checked + span:before
+{
+    content:'\2714';
+    position: absolute;
+    top:-5px;
+    left:0px;
+}
+
+
+#calendar
+{
+    color:#67696B;
+    position: absolute;
+    top:45%;
+    left:6.5%;
+}
+
+
+.work-type
+{
+    position: absolute;
+    left:80%;
+    top:10%;
+    width: 15%;
+    height:50%;
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    color:white;
+        
+}
+
+
+
+#button-form-buttons
+{
+    top:38%;
+    left:55%;
+    height: 9%;
+    width: 15%;
+    background-color: red;
+}
+
+
